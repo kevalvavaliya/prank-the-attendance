@@ -1,5 +1,8 @@
 import requests
 import names
+from tkinter import *
+root = Tk()
+
 i=1234567890
 url = 'https://docs.google.com/forms/u/0/d/e/YOUR FORM LINK WILL BE HERE WITH FORM RESPONSE/formResponse'
 while True:
@@ -11,3 +14,6 @@ while True:
                 'pageHistory':0}
     user_agent = {'Referer':'https://docs.google.com/forms/d/e/VEW FORM URL OF THE FORM/viewform','User-Agent': "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36"}
     r = requests.post(url, data=form_data,headers=user_agent)
+    a = Label(root, text= r)
+    a.pack()
+root.mainloop()
