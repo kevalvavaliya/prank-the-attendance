@@ -5,7 +5,8 @@ from tkinter import *
 root = Tk()
 
 i=1234567890
-url = 'https://docs.google.com/forms/u/0/d/e/YOUR FORM LINK WILL BE HERE WITH FORM RESPONSE/formResponse'
+form_id = 'YOUR FORM LINK WILL BE HERE WITH FORM RESPONSE'
+url = f'https://docs.google.com/forms/u/0/d/e/{form_id}/formResponse'
 while True:
     i=i+1
     rname = names.get_full_name()
